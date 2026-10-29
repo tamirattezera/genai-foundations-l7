@@ -1,0 +1,23 @@
+{
+  "experiment_name": "lesson_07_product_description_grounding",
+  "model_requested": "gemini-3.8-flash",
+  "generation_config": {
+    "max_output_tokens": 150
+  },
+  "product_facts": {
+    "name": "Everyday Shirt",
+    "material": "cotton",
+    "color": "blue"
+  },
+  "executed_at_utc": "2026-10-27T06:03:48.193056+00:00",
+  "conditions": {
+    "A": {
+      "prompt": "\nWrite a short product description for a product named \"Everyday Shirt\".\n",
+      "raw_output": ": Classic, timeless, flattering"
+    },
+    "B": {
+      "prompt": "\nWrite a short product description for the product below.\n\nVerified product facts:\n- Name: Everyday Shirt\n- Material: cotton\n- Color: blue\n\nUse only the verified facts provided. Do not invent or imply additional\nproduct attributes. If a detail is unknown, leave it out.\n",
+      "raw_output": "The Everyday Shirt is a blue"
+    }
+  }
+}

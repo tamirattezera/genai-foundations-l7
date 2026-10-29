@@ -1,0 +1,87 @@
+{
+  "experiment_name": "lesson_07_product_description_grounding",
+  "research_question": "Does adding verified product facts and an instruction to avoid unsupported claims improve factual support in an LLM-generated product description?",
+  "hypothesis": "Condition B will have a higher factual claim support rate than A.",
+  "verified_product_facts": {
+    "name": "Everyday Shirt",
+    "material": "cotton",
+    "color": "blue"
+  },
+  "rubric": {
+    "supported": "The claim is directly supported by the verified product facts.",
+    "unsupported": "The claim is not established by the verified product facts.",
+    "contradicted": "The claim conflicts with the verified product facts."
+  },
+  "claim_evaluations": [
+    {
+      "condition": "A",
+      "claim": "Classic",
+      "status": "unsupported",
+      "reason": "The verified facts do not establish the product's style."
+    },
+    {
+      "condition": "A",
+      "claim": "timeless",
+      "status": "unsupported",
+      "reason": "The verified facts provide no evidence for this claim."
+    },
+    {
+      "condition": "A",
+      "claim": "flattering",
+      "status": "unsupported",
+      "reason": "No evidence about fit or appearance was provided."
+    },
+    {
+      "condition": "B",
+      "claim": "Everyday Shirt",
+      "status": "supported",
+      "reason": "Matches the verified product name."
+    },
+    {
+      "condition": "B",
+      "claim": "blue",
+      "status": "supported",
+      "reason": "Matches the verified product color."
+    }
+  ],
+  "condition_metrics": {
+    "A": {
+      "total_claims": 3,
+      "supported": 0,
+      "unsupported": 3,
+      "contradicted": 0,
+      "support_rate_percent": 0.0
+    },
+    "B": {
+      "total_claims": 2,
+      "supported": 2,
+      "unsupported": 0,
+      "contradicted": 0,
+      "support_rate_percent": 100.0
+    }
+  },
+  "completeness_rubric": {
+    "0": "No useful product description",
+    "1": "Minimal or incomplete description",
+    "2": "Understandable description with limited detail",
+    "3": "Clear, useful description using available product facts"
+  },
+  "completeness_evaluations": {
+    "A": {
+      "score": 1,
+      "reason": "Uses generic promotional words but does not identify the product or communicate its verified attributes."
+    },
+    "B": {
+      "score": 1,
+      "reason": "Identifies the product and its color, but the sentence is incomplete and omits the verified material."
+    }
+  },
+  "observed_conclusion": "In this single run per condition, B had a higher factual claim support rate than A, while both outputs received the same completeness score. The result is preliminary and does not establish general model behavior.",
+  "limitations": [
+    "Only one generation was collected per condition.",
+    "The conditions differ in both supplied facts and instructions.",
+    "Claim classification and completeness scoring involve human judgment.",
+    "The outputs were very short and neither was a complete description.",
+    "The observed percentages do not establish statistical significance."
+  ]
+}
