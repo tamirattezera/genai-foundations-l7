@@ -1,0 +1,56 @@
+{
+  "experiment_id": "PE-001",
+  "title": "Zero-Shot vs Few-Shot Prompting",
+  "status": "completed",
+  "research_question": "Does adding three labeled demonstrations improve classification accuracy on six unseen customer-support messages?",
+  "hypothesis": "Few-shot prompting will improve classification accuracy.",
+  "evaluation": {
+    "task": "Customer-support message classification",
+    "sample_size": 6,
+    "metric": "accuracy",
+    "formula": "correct_predictions / total_predictions * 100"
+  },
+  "conditions": {
+    "zero_shot": {
+      "description": "Classification instructions without labeled demonstrations",
+      "demonstration_count": 0,
+      "correct_predictions": 6,
+      "incorrect_predictions": 0,
+      "total_predictions": 6,
+      "accuracy_percent": 100
+    },
+    "few_shot": {
+      "description": "Classification instructions with three labeled demonstrations",
+      "demonstration_count": 3,
+      "correct_predictions": 6,
+      "incorrect_predictions": 0,
+      "total_predictions": 6,
+      "accuracy_percent": 100
+    }
+  },
+  "comparison": {
+    "accuracy_difference_percentage_points": 0,
+    "hypothesis_supported": false,
+    "interpretation": "Both prompting conditions achieved the same reported accuracy."
+  },
+  "model_configuration": {
+    "model_name": null,
+    "temperature": null,
+    "max_output_tokens": null,
+    "note": "Complete original model settings were not preserved."
+  },
+  "reproducibility": {
+    "original_prompts_preserved": false,
+    "original_dataset_preserved": false,
+    "raw_predictions_preserved": false,
+    "repeated_runs": false,
+    "aggregate_results_preserved": true
+  },
+  "limitations": [
+    "Small evaluation sample of six messages.",
+    "Both conditions achieved 100 percent accuracy, creating a ceiling effect.",
+    "Complete model settings were not preserved.",
+    "No repeated experimental runs were performed.",
+    "Original message-level predictions were not recovered."
+  ]
+}

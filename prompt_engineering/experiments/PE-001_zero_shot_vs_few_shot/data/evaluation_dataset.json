@@ -1,0 +1,46 @@
+{
+  "experiment_id": "PE-001",
+  "dataset_name": "customer_support_classification",
+  "description": "Six unseen customer-support messages used in the historical zero-shot versus few-shot comparison.",
+  "total_messages": 6,
+  "evidence_status": "original_message_text_and_expected_labels_not_recovered",
+  "records": [
+    {
+      "id": "MSG-001",
+      "message": null,
+      "expected_label": null,
+      "evidence_status": "not_recovered"
+    },
+    {
+      "id": "MSG-002",
+      "message": null,
+      "expected_label": null,
+      "evidence_status": "not_recovered"
+    },
+    {
+      "id": "MSG-003",
+      "message": null,
+      "expected_label": null,
+      "evidence_status": "not_recovered"
+    },
+    {
+      "id": "MSG-004",
+      "message": null,
+      "expected_label": null,
+      "evidence_status": "not_recovered"
+    },
+    {
+      "id": "MSG-005",
+      "message": null,
+      "expected_label": null,
+      "evidence_status": "not_recovered"
+    },
+    {
+      "id": "MSG-006",
+      "message": null,
+      "expected_label": null,
+      "evidence_status": "not_recovered"
+    }
+  ],
+  "note": "These records preserve the known evaluation sample size. They are not a usable replacement for the original dataset."
+}
